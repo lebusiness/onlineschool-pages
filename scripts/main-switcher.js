@@ -22,7 +22,7 @@ const changePromo = (switchBtn) => {
     switchBtn.classList.add('switch-item--active');
 
     if (switchBtn == switchs[0]) {
-        addCardStyle('Тебя ждет успех <br> в NGM School', '#39b7ff', "url('./../imgs/main-promo/3.jpg')")
+        addCardStyle('Тебя ждет успех <br> в Online School', '#39b7ff', "url('./../imgs/main-promo/3.jpg')")
     } else if (switchBtn == switchs[1]) {
         addCardStyle(
             'Тебя ждет успех, <br> когда преподаватель <br> всегда поддержит', 
