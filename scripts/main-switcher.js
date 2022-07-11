@@ -22,24 +22,28 @@ const changePromo = (switchBtn) => {
     switchBtn.classList.add('switch-item--active');
 
     if (switchBtn == switchs[0]) {
-        addCardStyle('Тебя ждет успех <br> в Online School', '#39b7ff', "url('./../imgs/main-promo/3.jpg')")
+        addCardStyle(
+            'Тебя ждет успех <br> в Online School', 
+            '#39b7ff', 
+            "url('./imgs/main-promo/3.jpg')"
+    )
     } else if (switchBtn == switchs[1]) {
         addCardStyle(
             'Тебя ждет успех, <br> когда преподаватель <br> всегда поддержит', 
             '#7ed957', 
-            "url('./../imgs/main-promo/2.jpg')"
+            "url('./imgs/main-promo/2.jpg')"
         )
     } else if (switchBtn == switchs[2]) {
         addCardStyle(
             'Тебя ждет успех, <br> когда занятия <br> тебе в радость', 
             '#ff66c4', 
-            "url('./../imgs/main-promo/1.jpg')"
+            "url('./imgs/main-promo/1.jpg')"
         )
     } else if (switchBtn == switchs[3]) {
         addCardStyle(
             'Тебя ждет успех, <br> если видишь <br> прогресс', 
             '#fcbd25', 
-            "url('./../imgs/main-promo/4.jpg')"
+            "url('./imgs/main-promo/4.jpg')"
         )
     }
 }
