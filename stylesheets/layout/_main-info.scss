@@ -1,0 +1,46 @@
+@use '../abstracts' as *;
+
+.main-info {
+    background-color: $bg--ligth;
+    &__card {    
+        background: rgb(255, 254, 236);
+        position: relative;
+        border-radius: 40px;
+        padding: 40px 300px 30px 40px;
+        border: 5px solid $border-color;
+        @media (max-width: map-get($container-max-widths, lg)) {
+            padding: 30px 150px 30px 20px;
+        }
+        @media (max-width: map-get($container-max-widths, md)) {
+            padding: 30px 130px 30px 20px;
+        }
+        @media (max-width: map-get($container-max-widths, sm)) {
+            padding: 30px 20px 30px 20px;
+        }
+    }
+    &__paragraph {
+        font-size: 30px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+        @media (max-width: map-get($container-max-widths, lg)) {
+            font-size: 18px;
+        }
+        @media (max-width: map-get($container-max-widths, md)) {
+            font-size: 16px;
+        }
+    }
+    &__img {
+        width: 250px;
+        position: absolute;
+        right: 0;
+        bottom: 0px;
+        @media (max-width: map-get($container-max-widths, lg)) {
+            width: 150px;
+            right: -40px;
+            bottom: -40px;
+        }
+        @media (max-width: map-get($container-max-widths, lg)) {
+            width: 100px;
+        }
+    }
+}

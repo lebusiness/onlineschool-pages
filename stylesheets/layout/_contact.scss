@@ -1,0 +1,86 @@
+@use '../abstracts' as *;
+
+.contact {
+    background-color: $bg--ligth;
+    &__wrapper {
+        @include flex(row, space-between, flex-start);
+        @media (max-width: map-get($container-max-widths, lg)) {
+            flex-direction: column;
+        }
+    }
+    &__content {
+        flex: 1;
+        position: relative;
+    }
+    
+    &__subtitle {
+        margin-top: 45px;
+        font-size: 30px;
+        color: $black--middle;
+        @media (max-width: map-get($container-max-widths, lg)) {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+    }
+    &__form-wrapper {
+        @include flex(column, flex-start, flex-end);    
+        flex: 1.5;
+        @media (max-width: map-get($container-max-widths, lg)) {
+            margin-top: 30px;
+            flex: 1;
+        }
+    }
+    &__form {
+        width: 65%;
+        margin-top: 30px;
+        @include flex(column, flex-start, flex-end);    
+        &-title {
+            font-size: 30px;
+            color: $black--middle;
+            @media (max-width: map-get($container-max-widths, lg)) {
+                font-size: 25px;
+            }
+        }
+        @media (max-width: map-get($container-max-widths, lg)) {
+            width: 100%;
+        }
+    }
+    &__input {
+        margin-top: 10px;
+        width: 100%;
+        font-size: 24px;
+        padding: 30px 20px;
+        color: #242d34;
+        height: 56px;
+        border-radius: 8px;
+        border: none;
+        @media (max-width: map-get($container-max-widths, lg)) {
+            font-size: 20px;
+        }
+    }
+    &__btn {
+        margin-top: 10px;
+        width: 100%;
+        font-size: 24px;
+        padding-top: 7px;
+        color: #242d34;
+        background: $border-color;
+        color: white;
+        height: 56px;
+        border-radius: 8px;
+        border: none;
+        @media (max-width: map-get($container-max-widths, lg)) {
+            font-size: 20px;
+        }
+    }
+    &__img {
+        height: 120px;
+        right: -180px;
+        top: 80px; 
+        position: absolute;
+        @media (max-width: map-get($container-max-widths, lg)) {
+            display: none;
+        }
+    }
+   
+}

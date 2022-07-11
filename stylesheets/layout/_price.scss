@@ -1,0 +1,93 @@
+@use '../abstracts' as *;
+
+.price {
+    background-color: $bg--heavy;
+    &__toggle-wrapper {
+        display: none;
+        &--active {
+            display: block;
+        }
+    }
+    &__title {
+        background: $bg--heavy;
+    }
+    &__title-sub {
+        cursor: pointer;
+    }
+    &__wrapper {
+        grid-template-columns: 2.4fr 1.3fr 1.3fr 1.3fr;
+        @media (max-width: map-get($container-max-widths, xl)) {
+            grid-template-columns: 1.3fr 1.3fr
+        }
+    }
+    &__card {
+        overflow: hidden;
+        border: none;
+        height: 100%;
+        position: relative;
+        &--large {
+            padding-right: 150px;
+            @media (max-width: map-get($container-max-widths, xl)) {
+                padding-right: 20px;
+            }
+        }
+    }
+    &__img {
+        height: 250px;
+        position: absolute;
+        right: -30px;
+        bottom: -10px;
+        @media (max-width: map-get($container-max-widths, xl)) {
+            display: none;
+        }
+
+    }
+    &__lessons{
+        &-wrap {
+            @include flex(row, flex-start, flex-start);
+            font-weight: 400;
+            font-size: 18px;
+        }
+        &-count {
+            font-weight: 400;
+            margin-right: 10px;
+            font-size: 38px;
+            letter-spacing: .2px;
+            @media (max-width: map-get($container-max-widths, xl)) {
+                font-size: 34px;
+            }
+            @media (max-width: map-get($container-max-widths, sm)) {
+                font-size: 30px;
+            }
+        }
+    }
+    &__value {
+        font-family: 'Roboto', sans-serif;
+        margin-top: 30px;
+        font-size: 38px;
+        @media (max-width: map-get($container-max-widths, lg)) {
+            font-size: 34px;
+        }
+        @media (max-width: map-get($container-max-widths, sm)) {
+            font-size: 30px;
+        }
+    }
+    &__sub {
+        color: rgba(4, 18, 27, 0.314);
+        font-weight: 500;
+    }
+    &__text {
+        margin-top: 15px;
+        font-weight: 400;
+        font-size: 20px;
+        flex: 1;
+        line-height: 1.4;
+        @media (max-width: map-get($container-max-widths, lg)) {
+            font-size: 18px;
+        }
+        @media (max-width: map-get($container-max-widths, sm)) {
+            font-size: 16px;
+        }
+    }
+
+}

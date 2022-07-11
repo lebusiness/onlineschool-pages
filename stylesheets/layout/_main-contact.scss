@@ -1,0 +1,118 @@
+@use '../abstracts' as *;
+
+.main-contact {
+    padding-top: 90px;
+    background-color: $bg--ligth;
+    @media (max-width: map-get($container-max-widths, lg)) {
+        padding-top: 40px;
+    }
+    &__card {
+        position: relative;
+        background: rgba(43, 197, 231, 0.937);
+        padding: 30px 40px 100px;
+        border-radius: 25px;
+        @media (max-width: map-get($container-max-widths, lg)) {
+            padding: 20px 30px 50px;
+        }
+        @media (max-width: map-get($container-max-widths, md)) {
+            padding: 20px 20px 30px;
+        }
+    }
+    
+    &__title {
+        margin-top: 30px;
+        color: white;
+        font-size: 35px;
+        @media (max-width: map-get($container-max-widths, md)) {
+            font-size: 25px;
+        }
+    }
+    &__img {
+        z-index: 1;
+        position: absolute;
+        height: 700px;
+        right: -300px;
+        bottom: 0;
+        @media (max-width: 1350px) {
+            height: 600px;
+        }
+        @media (max-width: 1200px) {
+            height: 500px;
+            right: -250px;
+        }
+        @media (max-width: map-get($container-max-widths, lg)) {
+            display: none;
+        }
+    }
+    &__form {
+        z-index: 2;
+        position: relative;
+        width: 600px;
+        margin-top: 30px;
+        @media (max-width: map-get($container-max-widths, lg)) {
+            width: 100%;
+            margin-top: 20px;
+        }
+        @media (max-width: map-get($container-max-widths, md)) {
+            margin-top: 10px;
+        }
+        
+    }
+    &__select {
+        padding: 30px 20px;
+        margin-top: 10px;
+        width: 100%;
+        font-size: 24px;
+        border-radius: 8px;
+        border: none;
+        @media (max-width: map-get($container-max-widths, lg)) {
+            font-size: 20px;
+        }
+        @media (max-width: map-get($container-max-widths, md)) {
+            font-size: 16px;
+        }
+        @media (max-width: map-get($container-max-widths, md)) {
+            font-size: 14px;
+        }
+    }
+    &__input {
+        margin-top: 10px;
+        width: 100%;
+        font-size: 24px;
+        padding: 30px 20px;
+        color: #242d34;
+        height: 56px;
+        border-radius: 8px;
+        border: none;
+        @media (max-width: map-get($container-max-widths, lg)) {
+            font-size: 20px;
+        }
+        @media (max-width: map-get($container-max-widths, md)) {
+            font-size: 16px;
+        }
+        @media (max-width: map-get($container-max-widths, md)) {
+            font-size: 14px;
+        }
+    }
+    &__btn {
+        margin-top: 10px;
+        width: 100%;
+        font-size: 24px;
+        padding-top: 4px;
+        // color: #242d34;
+        background: #ff6bbff6;
+        color: white;
+        height: 56px;
+        border-radius: 8px;
+        border: none;
+        @media (max-width: map-get($container-max-widths, lg)) {
+            font-size: 20px;
+        }
+        @media (max-width: map-get($container-max-widths, md)) {
+            font-size: 16px;
+        }
+        @media (max-width: map-get($container-max-widths, md)) {
+            font-size: 14px;
+        }
+    }
+}

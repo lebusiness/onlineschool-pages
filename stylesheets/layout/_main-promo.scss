@@ -1,0 +1,97 @@
+@use '../abstracts' as *;
+
+.main-promo {
+    padding-top: 90px;
+    background-color: $bg--ligth;
+    @media (max-width: map-get($container-max-widths, lg)) {
+        padding-top: 40px;
+    }
+    &__card {
+        min-height: 80vh;
+        background: url('./../imgs/main-promo/3.jpg');
+        background-size: cover;
+        padding: 30px 40px 100px;
+        border-radius: 25px;
+
+        @include flex(column, space-between, flex-start);
+        @media (max-width: map-get($container-max-widths, lg)) {
+            min-height: auto;
+        }
+        @media (max-width: map-get($container-max-widths, sm)) {
+            padding: 20px 20px 50px;
+        }
+        
+    }
+    &__switcher-wrap {
+        @include flex(row, flex-start, flex-start);
+        @media (max-width: map-get($container-max-widths, md)) {
+            display: none;
+        }
+    }
+    &__switch {
+        margin-left: 10px;
+        color: white;
+        opacity: 0.5;
+        border: 1px solid #ffffff;
+        padding: 13px 20px 8px 20px;
+        border-radius: 20px;
+        font-size: 20px;
+        transition: 0.2s opacity;
+        &:hover {
+            cursor: pointer;
+            opacity: 1;
+        }
+    }
+    &__star {
+        height: 20px;
+        width: 20px;
+        border-radius: 100%;
+        &-wrap {
+            opacity: 0.5;
+            @include flex(row, center, center);
+            border: 1px solid #ffffff;
+            border-radius: 100%;
+            height: 45px;
+            width: 45px;
+            transition: 0.2s opacity;
+            &:hover {
+                cursor: pointer;
+                opacity: 1;
+            }
+        }
+    }
+    &__title {
+        margin-top: 30px;
+        color: white;
+        font-size: 65px;
+        @media (max-width: map-get($container-max-widths, lg)) {
+            font-size: 55px;
+        }
+        @media (max-width: map-get($container-max-widths, md)) {
+            font-size: 55px;
+        }
+        @media (max-width: map-get($container-max-widths, sm)) {
+            font-size: 35px;
+        }
+    }
+    &__subtitle {
+        opacity: 0.8;
+        margin-top: 50px;
+        color: white;
+        font-size: 40px;
+        letter-spacing: 1px;
+        @media (max-width: map-get($container-max-widths, lg)) {
+            font-size: 35px;
+        }
+        @media (max-width: map-get($container-max-widths, md)) {
+            font-size: 30px;
+        }
+        @media (max-width: map-get($container-max-widths, sm)) {
+            font-size: 25px;
+        }
+    }
+}
+
+.switch-item--active {
+    opacity: 1;
+}

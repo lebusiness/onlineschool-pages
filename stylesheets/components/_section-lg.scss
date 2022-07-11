@@ -1,0 +1,13 @@
+@use '../abstracts/' as *;
+
+
+.container-lg {
+    padding: 0 94px;
+    max-width: 1500px;
+    margin: 0 auto;
+    @media (max-width: map-get($container-max-widths, md)) {
+        padding: 0;
+        width: 93%;
+        margin: 0 auto;
+    }
+}

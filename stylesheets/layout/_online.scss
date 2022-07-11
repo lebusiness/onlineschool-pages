@@ -1,0 +1,70 @@
+@use '../abstracts' as *;
+
+.online {
+    background-color: $bg--ligth;
+    &__title {
+        background: $bg--ligth;
+    }
+    &__wrapper {
+        grid-template-columns: 33fr 67fr;
+    }
+    &__item {
+        &--1 {
+            grid-row: 1/2;
+            height: 100%;
+            @media (max-width: map-get($container-max-widths, lg)) {
+                grid-row: auto;
+            }
+        }
+        &--3 {
+            grid-column: 1/3;
+            @media (max-width: map-get($container-max-widths, lg)) {
+                grid-column: auto;
+            }
+        }
+        .card--color-blue {
+            position: relative;
+            padding-bottom: 50px;
+            padding-right: 150px;
+            @media (max-width: map-get($container-max-widths, lg)) {
+                padding-bottom: 50px;
+                padding-right: 50px;
+            }
+            @media (max-width: map-get($container-max-widths, sm)) {
+                padding-bottom: 20px;
+                padding-right: 20px;
+            }
+        }
+       
+    }
+    &__card {
+        &-video {
+            border-radius: 13px;
+            border: 8px solid $border-color;
+        }
+    }
+    &__btn {
+        padding: 20px 50px;
+        transform: rotate(-6deg);
+        margin-bottom: 30px;
+    }
+    &__icon {
+        height: 90px;
+        top: 50%;
+        transform: translateY(-50%);
+        position: absolute;
+        right: 35px;
+        @media (max-width: map-get($container-max-widths, lg)) {
+            display: none;
+        }
+    }
+    &__pers {
+        height: 220px;
+        @media (max-width: map-get($container-max-widths, lg)) {
+            height: 180px;
+        }
+        @media (max-width: map-get($container-max-widths, sm)) {
+            height: 150px;
+        }
+    }
+}

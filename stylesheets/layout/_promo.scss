@@ -1,0 +1,58 @@
+@use '../abstracts' as *;
+
+.promo {
+    padding-top: 130px;
+    background-color: $bg--ligth;
+    @media (max-width: map-get($container-max-widths, lg)) {
+        padding-top: 40px;
+    }
+    &__title {
+        font-weight: 400;
+        font-size: 75px;
+        color: #333;
+        @media (max-width: map-get($container-max-widths, lg)) {
+            font-size: 55px;
+        }
+        @media (max-width: map-get($container-max-widths, md)) {
+            font-size: 45px;
+        }
+        @media (max-width: map-get($container-max-widths, sm)) {
+            font-size: 35px;
+        }
+    }
+    &__call-wrapper {
+        @include flex(column, flex-start, flex-start);
+    }
+    &__btn {
+        padding: 16px 15px 20px;
+        align-self: flex-end;
+        transform: rotate(4deg);
+        padding-left: 35px;
+        padding-right: 35px;
+        @media (max-width: map-get($container-max-widths, lg)) {
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+        @media (max-width: map-get($container-max-widths, sm)) {
+            padding-left: 15px;
+            padding-right: 15px;
+            transform: none;
+        }
+    }
+    &__icon {
+        align-self: flex-start
+    }
+    &__wrapper {
+        &--top {
+            grid-template-columns: 59fr 41fr;
+        }
+        &--bottom {
+            margin-top: $items-gap;
+            grid-template-columns: 50fr 50fr;
+        }   
+    }
+    &__card-video {
+        border-radius: 13px;
+        border: 8px solid $border-color;
+    }
+}

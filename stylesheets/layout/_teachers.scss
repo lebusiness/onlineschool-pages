@@ -1,0 +1,72 @@
+
+@use '../abstracts' as *;
+
+.teachers {
+    background-color: $bg--heavy;
+    &__wrapper {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    &__title {
+        background: $bg--heavy;
+    }
+    &__item {
+        &--5 {
+            grid-column: 2/4;
+            @media (max-width: map-get($container-max-widths, lg)) {
+                grid-column: auto;
+            }
+        }
+        @include flex(row, center, center);
+        &--4 {
+            @include flex(row, center, center)
+        }
+        &-wrap {
+            border-radius: 20px;
+            padding: 10px;
+            background: white;
+            @include flex(row, flex-start, flex-start);
+            @media (max-width: map-get($container-max-widths, lg)) {
+                flex-direction: column;
+            }
+        }
+        &-paragraph {
+            padding: 20px 40px 20px 20px;
+            font-size: 30px;
+            line-height: 1.5;
+            @media (max-width: map-get($container-max-widths, xl)) {
+                font-size: 25px;
+            }
+            @media (max-width: map-get($container-max-widths, md)) {
+                font-size: 20px;
+            }
+        }
+    }
+    
+    &__card {
+        padding-bottom: 50px;
+        // height: 100%;
+        @include flex(row, center, center);
+
+        &--2 {
+            transform: rotate(-4deg);
+            height: 80%;
+            @media (max-width: map-get($container-max-widths, xl)) {
+                transform: none;
+                height: 100%;
+            }
+        }
+        &-video {
+            border-radius: 20px;
+            border: 8px solid white;
+            &--3 {
+                border-radius: 10px;
+                width: 45%;
+                border: none;
+                @media (max-width: map-get($container-max-widths, lg)) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    
+}

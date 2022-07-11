@@ -1,0 +1,97 @@
+@use '../abstracts' as *;
+
+.main-feeds {
+    background-color: $bg--ligth;
+    &__main-wrapper{
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px;
+        @media (max-width: map-get($container-max-widths, xl)) {
+            grid-template-columns: 1fr;
+        }
+        @media (max-width: map-get($container-max-widths, lg)) {
+            gap: 20px;
+        }
+        @media (max-width: map-get($container-max-widths, md)) {
+            gap: 10px;
+        }
+    }
+    &__text {
+        margin-top: 20px;
+        font-size: 20px;
+        line-height: 1.4;
+        @media (max-width: map-get($container-max-widths, lg)) {
+            font-size: 18px;
+        }
+        @media (max-width: map-get($container-max-widths, md)) {
+            font-size: 16px;
+        }
+        @media (max-width: map-get($container-max-widths, sm)) {
+            font-size: 14px;
+        }
+    }
+    &__item {
+        &-card {
+            margin-top: 20px;
+            background: #ffffff;
+            border-radius: 40px;
+            padding: 30px 30px 30px 30px;
+            // border: 5px solid $border-color;
+
+            @media (max-width: map-get($container-max-widths, lg)) {
+                padding: 30px 20px 30px 20px;
+            }
+        }
+        &-wrap {
+            display: flex;
+        }
+        &-img {
+            border-radius: 100%;
+            margin-right: 20px;
+        }
+        &-name {
+            font-size: 20px;
+            color: rgba(50, 59, 128, 0.823);
+            font-weight: 700;
+            @media (max-width: map-get($container-max-widths, md)) {
+                font-size: 16px;
+            }
+        }
+        &-mark {
+            margin-top: 6px;
+            color: rgb(123, 123, 123);
+            span {
+                margin-left: 3px;
+                transform: translateY(-2.5px);
+                display: inline-block;
+                background: $border-color;
+                color: white;
+                font-size: 14px;
+                padding: 5px 10px 3px 12px;
+                border-radius: 15px;
+                width: auto;
+                height: auto;
+                line-height: 1;
+                @media (max-width: map-get($container-max-widths, md)) {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+    &__card {
+        margin-top: 20px;
+        transform: rotate(-2deg);
+        background: $bg--heavy;
+        border-color: white;
+        &-img {
+            top: -60px;
+            right: -20px;
+            position: absolute;
+            width: 120px;
+            @media (max-width: map-get($container-max-widths, xl)) {
+                top: -60px;
+                right: -20px;
+                width: 100px;
+            }
+        }
+    }
+}

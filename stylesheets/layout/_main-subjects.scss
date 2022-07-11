@@ -1,0 +1,100 @@
+@use '../abstracts' as *;
+
+.main-subjects {
+    padding-top: 90px;
+    background-color: $bg--ligth;
+    @media (max-width: map-get($container-max-widths, lg)) {
+        padding-top: 40px;
+    }
+    
+    &__card {
+        // border: 5px solid $border-color;
+        box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.1);
+        background: white;
+        padding: 40px;
+        border-radius: 25px;
+        width: 95%;
+        margin: 0 auto;
+        @media (max-width: map-get($container-max-widths, lg)) {
+            width: 100%;
+        }
+        @media (max-width: map-get($container-max-widths, md)) {
+            padding: 30px 10px;
+        }
+    }
+    
+    &__main-wrapper {
+        margin: 0;
+        grid-template-columns: 1fr 1fr 1fr;
+        
+    }
+    &__item {
+        @include flex(column, flex-start, center);
+        &-catagory {
+            width: 98%;
+            color: #333;
+            border: 2px solid rgba(197, 197, 197, 0.273);
+            font-size: 20px;
+            text-align: center;
+            padding: 13px 20px 10px 20px;
+            border-radius: 20px;
+            margin: 0 auto;
+            &-wrap {
+                margin-bottom: 20px;
+                width: 100%;
+                @media (max-width: 1506px) {
+                    min-height: 75px;
+                }
+                @media (max-width: map-get($container-max-widths, lg)) {
+                    min-height: auto;
+                }
+            }
+        }
+    }
+
+    &__menu {
+        @include flex(row, flex-start, center);
+        &-item {
+            &-list {
+                padding: 10px;
+                &:hover {
+                    opacity: 1;
+                }
+                &-item {
+                    &-icon {
+                        height: 40px;
+                    }
+                }
+            }
+        }
+    }
+
+
+    &__list {
+        &-item {
+            @include flex(row, flex-start, flex-start);
+            &-icon {
+                width: 50px;
+                transform: translateY(-3px);
+            }
+            &-wrap {
+                margin-left: 15px;
+                @include flex(column, flex-start, flex-start);
+            }
+            &-subject {
+                font-size: 20px;
+                color: rgb(33, 33, 33);
+            }
+            &-grade {
+                font-size: 18px;
+                color: rgb(177, 177, 177);
+            }
+            &+& {
+                margin-top: 8px;
+            }
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}

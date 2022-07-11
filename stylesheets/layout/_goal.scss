@@ -1,0 +1,52 @@
+@use '../abstracts' as *;
+
+.goal {
+    background-color: $bg--ligth;
+    &__title {
+        background: $bg--ligth;
+    }
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 33fr 34fr 33fr;
+    }
+    &__card {
+        transform: rotate(-6deg);
+        position: relative;
+        padding-bottom: 50px;
+        @media (max-width: map-get($container-max-widths, lg)) {
+            transform: none;
+        }
+    }
+    &__item {
+        &--5 {
+            grid-column: 2/4;
+            height: 100%;
+            margin-top: -50px;
+            @media (max-width: map-get($container-max-widths, lg)) {
+                grid-column: auto;
+                margin: 0;
+            }
+        }
+        &--2, &--4 {
+            align-self: center;
+        }
+    }
+    &__icon {
+        height: 150px;
+        right: -50px;
+        top: -100px;
+        position: absolute;
+        transform: rotate(5deg);
+        @media (max-width: map-get($container-max-widths, lg)) {
+            height: 100px;
+            right: -20px;
+            top: -50px;
+        }
+        @media (max-width: map-get($container-max-widths, sm)) {
+            height: 100px;
+            right: -20px;
+            bottom: -30px;
+            top: auto;
+        }
+    }
+}

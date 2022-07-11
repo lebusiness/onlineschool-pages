@@ -1,0 +1,127 @@
+@use '../abstracts' as *;
+
+.header {
+    background-color: $bg--ligth;
+    padding: 10px 0;
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+    transition: 0.5s;
+    @media (max-width: map-get($container-max-widths, lg)) {
+        display: none;
+    }
+    &__container {
+        @include flex(row, flex-start, stretch);
+    }
+    &__nav {
+        @include flex(row, flex-start, stretch);
+    }
+    &__menu {
+        @include flex(row, flex-start, center);
+        &-item {
+            @include flex(row, center, center);
+            letter-spacing: 0.5px;
+            font-size: 16px;
+            margin-left: 40px;
+            position: relative;
+            cursor: pointer;
+            &-text {
+                @include flex(row, center, center);  
+                color: $black--middle;
+                transition: 0.2s;
+            }
+            &-arrow {
+                margin-left: 10px;
+                transform: translateY(-2px);
+                transition: 0.2s;
+            }
+            &-head {
+                height: inherit;
+                vertical-align: text-bottom;
+                @include flex(row, center, center);
+            }
+            &-list {
+                li + li{
+                    margin-top: 10px;
+                }
+                position: absolute;
+                transition: 0.4s opacity;
+                visibility: hidden;
+                opacity: 0;
+                z-index: 1;
+                width: 270px;
+                background: white;
+                border-radius: 20px;
+                left: -20px;
+                // bottom: -220%;
+                top: 50px;
+                padding: 24px 24px 16px;
+                box-shadow: 0 12px 24px 6px #61616114, 0 24px 48px 6px #61616114;
+                &:hover {
+                    opacity: 1;
+                }
+                &-item {
+                    &-icon {
+                        height: 40px;
+                    }
+                }
+            }
+            height: 100%;
+            &:hover .header__menu-item-list {
+                opacity: 1;
+                visibility: visible;
+            } 
+            &:hover .header__menu-item-arrow{
+                transform: rotate(180deg) translateY(2px);
+            }
+            &:hover .header__menu-item-text {
+                color: $black--light;
+            }
+        }
+    }
+    &__list {
+        &-item {
+            @include flex(row, flex-start, flex-start);
+            &-icon {
+                width: 40px;
+                transform: translateY(-3px);
+            }
+            &-wrap {
+                margin-left: 15px;
+                @include flex(column, flex-start, flex-start);
+            }
+            &-subject {
+                color: rgb(36, 36, 36);
+                font-size: 15px;
+                font-weight: 0.2s;
+            }
+            &-grade {
+                font-size: 15px;
+                color: rgb(115, 115, 115);
+            }
+            border-right: 2px solid rgba(0, 0, 0, 0);
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+    &__btn {
+        transition: 0.2s;
+        color: #333;
+        background: none;
+        justify-self: flex-end;
+        font-size: 16px;
+        padding: 10px 20px;
+        &-wrapper {
+            flex: 1;
+            @include flex(row, flex-end, center)
+        }
+    }
+}
+.header--active {
+    box-shadow: 0 12px 24px 6px #61616114, 0 24px 48px 6px #61616114;
+}
+.header__btn--active {
+    background: #00c1ff;
+    color: white;
+}

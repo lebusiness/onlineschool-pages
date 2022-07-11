@@ -1,0 +1,48 @@
+@use '../abstracts' as *;
+
+.main-lessons {
+    background-color: $bg--ligth;
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        margin-top: 0;
+    }
+    &__item {
+        box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.05);
+        background: white;
+        border-radius: 25px;
+        box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.1);
+        padding: 40px;
+        &-title {
+           font-size: 45px;
+           font-weight: 300;
+           span {
+                font-weight: 400;
+                font-family: 'Roboto', sans-serif;
+                display: block;
+                color: $border-color;
+           }
+            @media (max-width: map-get($container-max-widths, lg)) {
+                font-size: 40px;
+            }
+            @media (max-width: map-get($container-max-widths, md)) {
+                font-size: 35px;
+            }
+            @media (max-width: map-get($container-max-widths, sm)) {
+                font-size: 30px;
+            }
+        }
+        &-btn {
+           font-size: 20px;
+           margin-top: 20px;
+           padding: 13px 20px 10px 20px;
+           border: 1px solid black;
+           border-radius: 25px;
+           display: inline-block;
+            @media (max-width: map-get($container-max-widths, md)) {
+                font-size: 18px;
+            }
+        }
+    }
+}

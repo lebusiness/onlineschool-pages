@@ -1,0 +1,58 @@
+@use '../abstracts' as *;
+
+.convenience {
+    background-color: $bg--ligth;
+    &__wrapper {
+        grid-template-columns: 60fr 40fr;
+        align-items: center;
+    }
+    &__title {
+        background: $bg--ligth;
+    }
+    &__card {
+        padding: 0;
+        &-title {
+            padding: 30px;
+            @media (max-width: map-get($container-max-widths, lg)) {
+                padding: 20px;
+            }
+            @media (max-width: map-get($container-max-widths, sm)) {
+                padding: 15px;
+            }
+        }
+        &-item {
+            @include flex(column, flex-start, flex-start);
+            background: $bg--heavy;
+            padding: 25px 30px 25px 30px;
+            position: relative;
+            border-radius: 0 0 8px 8px;
+            @media (max-width: map-get($container-max-widths, lg)) {
+                padding: 20px;
+            }
+            @media (max-width: map-get($container-max-widths, sm)) {
+                padding: 15px;
+            }
+        }
+        
+    }
+    &__info {
+        font-weight: 400;
+        font-size: 22px;
+        color: #313530;
+        line-height: 1.5;
+    }
+    &__img {
+        width: 105%;
+        @media (max-width: map-get($container-max-widths, lg)) {
+            width: 100%;
+        }
+    }
+    &__item {
+        &--1 {
+            margin-left: -100px;
+            @media (max-width: map-get($container-max-widths, lg)) {
+                margin: 0;
+            }
+        }
+    }
+}

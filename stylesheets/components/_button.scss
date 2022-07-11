@@ -1,0 +1,21 @@
+
+@use '../abstracts/' as *;
+.btn {
+
+    background: #00c1ff;
+    display: inline-block;
+    color: white;
+    font-size: 32px;
+    border-radius: 12px;
+    transition: 0.2s;
+    @media (max-width: map-get($container-max-widths, lg)) {
+        font-size: 26px;
+    }
+    @media (max-width: map-get($container-max-widths, sm)) {
+        font-size: 20px;
+    }
+    &:hover {
+        cursor: pointer;
+        background: #29caff;
+    }
+}

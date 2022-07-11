@@ -1,0 +1,77 @@
+@use '../abstracts' as *;
+
+.card {
+    padding: 20px 20px 30px 20px;
+    border-radius: 18px;
+    background: white;
+    border: 8px solid $border-color;
+    @media (max-width: map-get($container-max-widths, lg)) {
+        padding: 15px 15px 20px 15px;
+        border: 6px solid $border-color;
+    }
+    &__title {
+        font-weight: 500;
+        font-size: 32px;
+        color: $black--heavy;
+        line-height: 1.20;
+        @media (min-width: map-get($container-max-widths, xxl)) {
+            font-size: 34px;
+        }
+        @media (max-width: map-get($container-max-widths, lg)) {
+            font-size: 28px;;
+        }
+        @media (max-width: map-get($container-max-widths, sm)) {
+            font-size: 26px;
+        }
+    }
+    &__info {
+        font-weight: 400;
+        margin-top: 15px;
+        font-size: 20px;
+        color: $black--middle;
+        line-height: 1.5;
+        @media (min-width: map-get($container-max-widths, xxl)) {
+            font-size: 22px;
+        }
+        @media (max-width: map-get($container-max-widths, lg)) {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+        @media (max-width: map-get($container-max-widths, sm)) {
+            font-size: 16px;
+        }
+    }
+    &--large {
+        padding: 30px 30px 40px 30px;
+        @media (max-width: map-get($container-max-widths, lg)) {
+            padding: 15px 15px 20px 15px;
+        }
+    }
+    &--color-blue {
+        background: $bg--blue;
+        padding: 20px;
+        border: 8px solid $border-color;
+        @media (max-width: map-get($container-max-widths, lg)) {
+            padding: 15px 15px 20px 15px;
+            border: 6px solid $border-color;
+        }
+    }
+    &--color-orange {
+        background: $bg--ligth;
+        padding: 20px;
+        border: 8px solid $border-color;
+        @media (max-width: map-get($container-max-widths, lg)) {
+            padding: 15px 15px 20px 15px;
+            border: 6px solid $border-color;
+        }
+    }
+    &--color-orange1 {
+        background: $bg--heavy;
+        padding: 20px;
+        border: 10px solid white;
+        @media (max-width: map-get($container-max-widths, lg)) {
+            padding: 15px 15px 20px 15px;
+            border: 6px solid white;
+        }
+    }
+}

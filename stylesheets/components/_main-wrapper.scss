@@ -1,0 +1,13 @@
+@use '../abstracts' as *;
+
+.main-wrapper {
+    margin-top: $wrapper-margin;
+    display: grid;
+    gap: $items-gap;
+    @media (max-width: map-get($container-max-widths, lg)) {
+        grid-template-columns: 1fr !important;
+    }
+    @media (max-width: map-get($container-max-widths, md)) {
+        margin-top: $wrapper-margin--sm;
+    }
+}

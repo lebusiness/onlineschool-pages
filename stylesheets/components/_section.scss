@@ -1,0 +1,8 @@
+@use '../abstracts/' as *;
+
+.section {
+    padding: $section-padding 0 30px 0;
+    @media (max-width: map-get($container-max-widths, sm)) {
+        padding: $section-padding--sm 0 20px 0;
+    }
+}

@@ -1,0 +1,35 @@
+
+@use '../abstracts' as *;
+
+.feeds {
+    background-color: $bg--ligth;
+    &__wrapper {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    &__title {
+        background: $bg--ligth;
+    }
+    &__item {
+        &--4 {
+            @include flex(column, center, center);
+            transform: rotate(-4deg);
+            @media (max-width: map-get($container-max-widths, lg)) {
+                transform: none;
+            }
+        }
+        
+    }
+    &__card {
+        padding-bottom: 50px;
+        &-video {
+            border-radius: 20px;
+            border: 8px solid $border-color;
+        }
+    }
+    &__icon {
+        top: -80px;
+        right: -50px;
+        position: absolute;
+    }
+    
+}
