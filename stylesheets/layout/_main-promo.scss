@@ -8,13 +8,14 @@
     }
     &__card {
         min-height: 80vh;
-        background: url('./../imgs/main-promo/3.jpg');
+        background: url('./../imgs/main-promo/3.jpg'), linear-gradient(#39b7ff, #39b7ff);
         background-size: cover;
         padding: 30px 40px 100px;
         border-radius: 25px;
 
         @include flex(column, space-between, flex-start);
         @media (max-width: map-get($container-max-widths, lg)) {
+            background: #ff66c4;
             min-height: auto;
         }
         @media (max-width: map-get($container-max-widths, sm)) {

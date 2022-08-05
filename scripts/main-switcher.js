@@ -2,16 +2,12 @@ let switchs = document.querySelectorAll('.switch-item');
 const title = document.querySelector('.main-promo__title');
 const card = document.querySelector('.main-promo__card');
 
-if (window.innerWidth < 1100) {
-    card.style.background = "#ff66c4";
-}
-
 const addCardStyle = (titleInner, backgroundColor, backgroundUrl) => {
     title.innerHTML = titleInner;
     if (window.innerWidth < 1100) {
         card.style.background = backgroundColor;
     } else {
-        card.style.background = backgroundUrl;
+        card.style.background = `${backgroundUrl}, linear-gradient(${backgroundColor}, ${backgroundColor})`;
     }
     card.style.backgroundSize = "cover";
 }
@@ -25,7 +21,7 @@ const changePromo = (switchBtn) => {
         addCardStyle(
             'Тебя ждет успех <br> в Online School', 
             '#39b7ff', 
-            "url('./imgs/main-promo/3.jpg')"
+            "url('./imgs/main-promo/3.jpg')",       
     )
     } else if (switchBtn == switchs[1]) {
         addCardStyle(
@@ -60,7 +56,7 @@ const autochangePromo = setInterval(() => {
     } else {
         changePromo(switchs[activeIndex+1]);
     }
-}, 2500)
+}, 3000)
 
 switchs.forEach(i => {
     i.addEventListener('click', e => {
